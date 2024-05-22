@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Meta tags para definir a codificação de caracteres e viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de médias</title>
+    
+    <!-- Conexões prévias para otimizar o carregamento das fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Link para importar a fonte "Roboto" do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <!-- Contêiner principal para envolver todo o conteúdo da página -->
+    <div class="container">
+        <!-- Cabeçalho da página -->
+        <header>
+            <!-- Imagem do logotipo -->
+            <img src="./Imagens/logo.png" alt="Capelo e diploma">
+            <!-- Título principal da página -->
+            <h1>Calculadora de Médias</h1>
+        </header>
+        
+        <!-- Formulário para adicionar atividades -->
+        <form id="form-atividade">
+            <!-- Campo de input para o nome da atividade -->
+            <input type="text" id="nome-atividade" required placeholder="Nome da Atividade"/>
+            <!-- Campo de input para a nota da atividade -->
+            <input type="number" id="nota-atividade" required placeholder="Nota da Atividade" min="0" max="10"/>
+            <!-- Botão para submeter o formulário -->
+            <button type="submit">Adicionar +</button>
+        </form>
+        
+        <!-- Tabela para exibir as atividades e suas notas -->
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <!-- Cabeçalhos das colunas da tabela -->
+                    <th>Nome da Atividade</th>
+                    <th>Nota da Atividade</th>
+                    <th>Aprovado?</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <!-- Linha para exibir a média final -->
+                    <td>Média Final</td>
+                    <td id="media-final-valor">---</td>
+                    <td id="media-final-resultado">---</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    
+    <!-- Inclusão do arquivo JavaScript externo -->
+    <script src="./main.js"></script>
+</body>
+</html>
